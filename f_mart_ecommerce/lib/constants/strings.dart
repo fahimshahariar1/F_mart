@@ -1,3 +1,3 @@
-const appname = "eMart";
+const appname = "fMart";
 const appversion = "Version 1.0.0";
-const credits = "@Baaba Devs";
+const credits = "@Fahim Shahariar";

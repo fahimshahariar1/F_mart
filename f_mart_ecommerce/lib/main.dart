@@ -1,3 +1,5 @@
+import 'package:f_mart_ecommerce/constants/consts.dart';
+import 'package:f_mart_ecommerce/screens/splash%20screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,12 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-
+        scaffoldBackgroundColor: Colors.transparent,
+        appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
+        fontFamily: regular,
         primarySwatch: Colors.blue,
       ),
-
+      home: SplashScreen(),
     );
   }
 }
