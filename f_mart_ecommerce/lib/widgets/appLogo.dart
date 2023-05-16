@@ -1,4 +1,5 @@
 import 'package:f_mart_ecommerce/constants/consts.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 Widget appLogoWidget() {
   return Image.asset(icAppLogo)

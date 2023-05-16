@@ -1,3 +1,12 @@
 const appname = "fMart";
 const appversion = "Version 1.0.0";
 const credits = "@Fahim Shahariar";
+const email = "Email";
+const emailHint = "fahim@gmail.com";
+const password = "Password";
+const passHint = "******";
+const forgotpass = "Forgot Password";
+const login = "Log In";
+const signup = "Sign Up";
+const createNewAccount = "or, Create a new account";
+const loginWith = "Log in with";
