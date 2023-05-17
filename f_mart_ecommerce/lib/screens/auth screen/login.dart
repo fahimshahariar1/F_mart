@@ -1,4 +1,5 @@
 import 'package:f_mart_ecommerce/constants/consts.dart';
+import 'package:f_mart_ecommerce/constants/lists.dart';
 import 'package:f_mart_ecommerce/widgets/appLogo.dart';
 import 'package:f_mart_ecommerce/widgets/bg_widget.dart';
 import 'package:f_mart_ecommerce/widgets/button.dart';
@@ -31,7 +32,24 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   10.heightBox,
-                  button((){}, Colors.red, whiteColor, login),
+                  button(() {}, Colors.red, whiteColor, login)
+                      .box
+                      .width(context.screenWidth - 50)
+                      .make(),
+                  5.heightBox,
+                  createNewAccount.text.color(fontGrey).make(),
+                  10.heightBox,
+                  button(() {}, lightgolden, Colors.red, signup)
+                      .box
+                      .width(context.screenWidth - 50)
+                      .make(),
+                  10.heightBox,
+                  loginWith.text.color(fontGrey).make(),
+                  Row(
+                    children: [
+                      List<CircleAvatar>.
+                    ],
+                  )
                 ],
               )
                   .box

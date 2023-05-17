@@ -1,13 +1,13 @@
 import 'package:f_mart_ecommerce/constants/consts.dart';
 
-Widget button(onPress, color, textColor, title) {
+Widget button(onPressed, color, textcolor, String? title) {
   return ElevatedButton(
       style: ElevatedButton.styleFrom(
         primary: color,
         padding: EdgeInsets.all(12),
       ),
       onPressed: () {
-        onPress;
+        onPressed;
       },
-      child: title.text.color(textColor).fontFamily(bold).make());
+      child: title?.text.color(textcolor).fontFamily(bold).make());
 }
