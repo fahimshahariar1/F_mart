@@ -6,8 +6,6 @@ Widget button(onPressed, color, textcolor, String? title) {
         primary: color,
         padding: EdgeInsets.all(12),
       ),
-      onPressed: () {
-        onPressed;
-      },
+      onPressed: onPressed,
       child: title?.text.color(textcolor).fontFamily(bold).make());
 }

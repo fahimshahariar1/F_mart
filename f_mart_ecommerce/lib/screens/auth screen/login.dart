@@ -1,9 +1,12 @@
 import 'package:f_mart_ecommerce/constants/consts.dart';
 import 'package:f_mart_ecommerce/constants/lists.dart';
+import 'package:f_mart_ecommerce/screens/auth%20screen/signup.dart';
 import 'package:f_mart_ecommerce/widgets/appLogo.dart';
 import 'package:f_mart_ecommerce/widgets/bg_widget.dart';
 import 'package:f_mart_ecommerce/widgets/button.dart';
 import 'package:f_mart_ecommerce/widgets/custom_textfield.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -12,12 +15,13 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return bgWidget(
       Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Center(
           child: Column(
             children: [
               (context.screenHeight * 0.1).heightBox,
               appLogoWidget(),
-              10.heightBox,
+              15.heightBox,
               "Log into $appname".text.fontFamily(bold).size(18).white.make(),
               10.heightBox,
               Column(
@@ -39,16 +43,33 @@ class Login extends StatelessWidget {
                   5.heightBox,
                   createNewAccount.text.color(fontGrey).make(),
                   10.heightBox,
-                  button(() {}, lightgolden, Colors.red, signup)
+                  button(() {
+                    Get.to(() => SignUp());
+
+                  }, lightgolden, Colors.red, signup)
+
                       .box
                       .width(context.screenWidth - 50)
                       .make(),
                   10.heightBox,
                   loginWith.text.color(fontGrey).make(),
+                  10.heightBox,
                   Row(
-                    children: [
-                      List<CircleAvatar>.
-                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(
+                      3,
+                      (index) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          radius: 25,
+                          backgroundColor: lightGrey,
+                          child: Image.asset(
+                              socialIconList[index],
+                          width: 30,
+                          ),
+                        ),
+                      ),
+                    ),
                   )
                 ],
               )
@@ -56,7 +77,7 @@ class Login extends StatelessWidget {
                   .white
                   .rounded
                   .padding(EdgeInsets.all(16))
-                  .width(context.screenWidth - 60)
+                  .width(context.screenWidth - 60).shadowSm
                   .make(),
             ],
           ),
