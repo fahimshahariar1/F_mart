@@ -8,8 +8,15 @@ import '../../widgets/bg_widget.dart';
 import '../../widgets/button.dart';
 import '../../widgets/custom_textfield.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  bool? isCheck = false;
 
   @override
   Widget build(BuildContext context) {
@@ -30,28 +37,17 @@ class SignUp extends StatelessWidget {
                   customTextField(email, emailHint, context),
                   customTextField(password, passHint, context),
                   customTextField(reTypePass, passHint, context),
-                  // Align(
-                  //   alignment: Alignment.centerRight,
-                  //   child: TextButton(
-                  //     onPressed: () {},
-                  //     child: forgotpass.text.make(),
-                  //   ),
-                  // ),
-
-                  // 5.heightBox,
-                  // createNewAccount.text.color(fontGrey).make(),
-                  // 10.heightBox,
-                  // button(() {}, lightgolden, Colors.red, signup)
-                  //     .box
-                  //     .width(context.screenWidth - 50)
-                  //     .make(),
                   10.heightBox,
                   Row(
                     children: [
                       Checkbox(
                           checkColor: Colors.red,
-                          value: false,
-                          onChanged: (newValue) {}),
+                          value: isCheck,
+                          onChanged: (newValue) {
+                            setState(() {
+                              isCheck = newValue;
+                            });
+                          }),
                       10.widthBox,
                       Expanded(
                         child: RichText(
@@ -104,7 +100,7 @@ class SignUp extends StatelessWidget {
                     ],
                   ),
                   10.heightBox,
-                  button(() {}, Colors.red, whiteColor, signup)
+                  button(() {}, isCheck == true? Colors.red : lightGrey, whiteColor, signup)
                       .box
                       .width(context.screenWidth - 50)
                       .make(),
@@ -127,25 +123,6 @@ class SignUp extends StatelessWidget {
                       Get.back();
                     },
                   ),
-                  // loginWith.text.color(fontGrey).make(),
-                  // 10.heightBox,
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   children: List.generate(
-                  //     3,
-                  //         (index) => Padding(
-                  //       padding: const EdgeInsets.all(8.0),
-                  //       child: CircleAvatar(
-                  //         radius: 25,
-                  //         backgroundColor: lightGrey,
-                  //         child: Image.asset(
-                  //           socialIconList[index],
-                  //           width: 30,
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // )
                 ],
               )
                   .box

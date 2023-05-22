@@ -1,6 +1,7 @@
 import 'package:f_mart_ecommerce/constants/consts.dart';
 import 'package:f_mart_ecommerce/constants/lists.dart';
 import 'package:f_mart_ecommerce/screens/auth%20screen/signup.dart';
+import 'package:f_mart_ecommerce/screens/home%20screen/home.dart';
 import 'package:f_mart_ecommerce/widgets/appLogo.dart';
 import 'package:f_mart_ecommerce/widgets/bg_widget.dart';
 import 'package:f_mart_ecommerce/widgets/button.dart';
@@ -36,7 +37,9 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   10.heightBox,
-                  button(() {}, Colors.red, whiteColor, login)
+                  button(() {
+                    Get.to(() => Home());
+                  }, Colors.red, whiteColor, login)
                       .box
                       .width(context.screenWidth - 50)
                       .make(),
