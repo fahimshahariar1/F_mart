@@ -1,5 +1,9 @@
 import 'package:f_mart_ecommerce/constants/consts.dart';
 import 'package:f_mart_ecommerce/controller/homecontroller.dart';
+import 'package:f_mart_ecommerce/screens/cart%20screen/cart.dart';
+import 'package:f_mart_ecommerce/screens/category%20screen/category.dart';
+import 'package:f_mart_ecommerce/screens/home%20screen/homescreen.dart';
+import 'package:f_mart_ecommerce/screens/profile%20screen/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -40,18 +44,10 @@ class Home extends StatelessWidget {
     ];
 
     var navBody = [
-      Container(
-        color: Colors.blue,
-      ),
-      Container(
-        color: Colors.amber,
-      ),
-      Container(
-        color: Colors.purple,
-      ),
-      Container(
-        color: Colors.cyan,
-      )
+      HomeScreen(),
+      CategoryScreen(),
+      CartScreen(),
+      ProfileScreen(),
     ];
 
     return Scaffold(
