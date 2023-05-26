@@ -17,4 +17,15 @@ const privacy = "Privacy Policy";
 const terms = "Terms and Condtion";
 const already = "Already have an account? ";
 
-const home = "Home", category = "categories", cart = "Cart", account = "Account";
+const home = "Home",
+    category = "categories",
+    cart = "Cart",
+    account = "Account";
+
+const search = "Search Anything",
+    today = "Today's Deal",
+    flash = "Flash Sale",
+    top = "Top Seller",
+    brand = "Brand",
+    topC = "Top Category",
+    feature = "Featured Categories";
