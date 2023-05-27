@@ -34,6 +34,9 @@ class HomeScreen extends StatelessWidget {
             ),
             VxSwiper.builder(
                 itemCount: sliderList.length, itemBuilder: (context, index) {
+              return Container(
+                child: Image.asset(sliderList[index], fit: ,),
+              );
 
             }
             )
