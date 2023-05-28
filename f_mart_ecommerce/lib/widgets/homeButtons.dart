@@ -1,15 +1,17 @@
 import 'package:f_mart_ecommerce/constants/consts.dart';
 import 'package:flutter/material.dart';
 
-Widget homebuttons() {
+Widget homebuttons({width, height, icon, String? title, onPress}) {
   return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
       Image.asset(
-        icTodaysDeal,
+        icon,
         width: 26,
       ),
-      5.heightBox,
-      today.text.fontFamily(semibold).color(darkFontGrey).make()
+
+      10.heightBox,
+      title!.text.fontFamily(semibold).color(darkFontGrey).make()
     ],
-  ).box.rounded.white.make();
+  ).box.rounded.white.size(width, height).shadowSm.make();
 }
